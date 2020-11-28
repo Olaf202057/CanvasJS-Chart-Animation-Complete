@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+body {
+	width: 75%;
+	margin: auto;
+}
+</style>
+<script type="text/javascript">
+window.onload = function() {
+var chart1 = new CanvasJS.Chart("chartContainer1", {
+	theme: "light2", // "light1", "dark1", "dark2"
+	animationEnabled: true,
+	animationComplete: function(e) {
+		alert("Animation Completed");
+	},
+	
+	title:{
+		text: "CanvasJS Column Chart with Animation"              
+	},
+	data: [{
+		type: "column",
+		dataPoints: [
+			{ label: "apple",  y: 10  },
+			{ label: "orange", y: 15  },
+			{ label: "banana", y: 25  },
+			{ label: "mango",  y: 30  },
+			{ label: "grape",  y: 28  }
+		]
+	}]
+});
+chart1.render();
+}
+</script>
+</head>
+<body>
+	<h1>CanvasJS Chart Animation Complete Event</h1>
+	<p>This plugin allows you to bind animationComplete event handler in CanvasJS Chart. Animation Complete Event gets fired after the dataseries has finished its initial animation.</p>
+	<h4>Live Example</h4>
+	<div id="chartContainer1" style="height: 360px; width: 80%; border: 1px solid black;"></div>
+	
+	<h2>CanvasJS</h2>
+	<p>CanvasJS is an HTML5 &amp; JavaScript based Charting Library that runs on all modern devices including iPhone, Android, Desktops, etc. Charts are beautiful and API is very simple to use.</p>
+	<h4>CanvasJS Features:</h4>
+	<ul>
+		<li>Simple API and easy to use</li>
+		<li>Supports 30+ different types of Charts / Graphs</li>
+		<li>10x faster than conventional Flash / SVG based Charting Libraries</li>
+		<li>Comes with Several beautiful looking themes</li>
+		<li>Well Maintained and Updated Documentation</li>
+		<li>Works across browsers (Chrome, Firefox, Safari, IE8+)</li>
+		<li>Can be integrated with Serverside and Frontend technologies like ASP.Net, PHP, Spring MVC, JSP, jQuery, Angular, React, etc.</li>
+	</ul>
+	<h4>How to Use?</h4>
+	<pre><code>var chart = new CanvasJS.Chart("chartContainer", {
+	.
+	.
+	.
+	//Chart Options
+	animationEnabled: true,
+	animationComplete: function(e) {
+		//Things to do once chart animation is complete
+	}
+	.
+	.
+	.
+});
+chart.render();
+</code></pre>
+<h4>Resources:</h4>
+<p>Code: <a href="https://github.com/vishwas-r/CanvasJS-Animation-Complete">Github Repo</a></p>
+<p>Documentation: <a href="https://canvasjs.com/docs/">CanvasJS Documentation</a></p>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<script src="dist/canvasjs-chart-animationcomplete.min.js"> </script>
+</body>
+</html>
